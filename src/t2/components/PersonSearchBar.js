@@ -56,7 +56,7 @@ function PrintButton({ view, filters }) {
   // Open print page in a new tab with filters as query params
   const handleClick = () => {
     const params = new URLSearchParams(filters).toString();
-    window.open(`/print/${view}?${params}`, '_blank');
+    window.open(`/task2/print/${view}?${params}`, '_blank');
   };
   return (
     <button type="button" onClick={handleClick} style={{ marginLeft: 0 }}>打印树结构</button>

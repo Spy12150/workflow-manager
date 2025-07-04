@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
-import './App.css';
-import DepartmentSearchBar from './t1/components/DepartmentSearchBar';
-import SystemSearchBar from './t1/components/SystemSearchBar';
-import PersonSearchBar from './t1/components/PersonSearchBar';
-import DepartmentView from './views/DepartmentView';
-import SystemView from './views/SystemView';
-import PersonView from './views/PersonView';
-import projectApi from './api/projectAPI';
-import { departmentTree, systemTree, personTree } from './mockTreeData';
-import { filterTree } from './utils/treeUtils';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PrintTreePage from './PrintTreePage';
+import './t2/App.css';
+import DepartmentSearchBar from './t2/components/DepartmentSearchBar';
+import SystemSearchBar from './t2/components/SystemSearchBar';
+import PersonSearchBar from './t2/components/PersonSearchBar';
+import DepartmentView from './t2/views/DepartmentView';
+import SystemView from './t2/views/SystemView';
+import PersonView from './t2/views/PersonView';
+import projectApi from './t2/api/projectAPI';
+import { departmentTree, systemTree, personTree } from './t2/mockTreeData';
+import { filterTree } from './t2/utils/treeUtils';
+import PrintTreePage from './t2/PrintTreePage';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   // State for current view, search filters, and tree data
@@ -132,19 +132,18 @@ function App() {
     content = <PersonView data={treeData} />;
   }
 
+  // Use Routes for print page and main dashboard
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={
-          <div className="App">
-            <h1>项目管理仪表盘</h1>
-            {searchBar}
-            {content}
-          </div>
-        } />
-        <Route path="/print/:view" element={<PrintTreePage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/print/:view" element={<PrintTreePage />} />
+      <Route path="/*" element={
+        <div className="App">
+          <h1>项目管理仪表盘</h1>
+          {searchBar}
+          {content}
+        </div>
+      } />
+    </Routes>
   );
 }
 

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App.css';
+import './t1/App.css';
 import Sidebar from './t1/components/Sidebar';
 import Header from './t1/components/Header';
 import StartProcessModal from './t1/components/StartProcessModal';

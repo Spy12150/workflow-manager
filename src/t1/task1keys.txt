@@ -1,0 +1,28 @@
+任务（Task）相关 keys
+
+appId：应用ID，标识任务属于哪个应用（如人事系统、财务系统等）
+groupId：流程组ID，标识任务属于哪个流程组
+flowId：流程定义ID，标识任务属于哪个具体流程
+name：任务名称（如“审批请假”、“合同签署”）
+taskId：任务ID，唯一标识每个任务
+dataId：关联流程数据ID，标识任务关联的数据
+receiveTime：接收时间，任务到达当前用户的时间
+handleTime：办理时间，任务被处理的时间
+
+
+流程跟踪（Process Tracking）相关 keys
+
+group：流程组名称（如“人事流程”、“财务流程”）
+name：流程名称（如“入职审批”、“报销审批”）
+definitionId：流程定义ID（同 flowId，标识流程类型）
+dataId：数据ID，流程实例的数据标识
+dataName：数据名称（如“张三入职”、“差旅报销”）
+appId：归属AppID，流程属于哪个应用
+appName：归属App名称（如“人事系统”、“财务系统”）
+currentHandler：当前办理人，流程当前节点的处理人
+
+
+筛选/过滤（Filter）相关 keys
+
+startDate：筛选的起始日期
+endDate：筛选的结束日期

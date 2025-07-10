@@ -1,0 +1,19 @@
+树结构（Tree Data）相关 keys
+
+id：节点唯一标识（如 'dept-1', 'proj-1', 'sys-1', 'task-1', 'person-1', 'prog-1' 等）
+name：节点名称（如“研发部”、“项目A”、“系统Alpha”、“任务1”、“进度1”等）
+children：子节点数组，递归结构
+person：负责人（仅部分节点有，如任务节点）
+status：进度状态（如“进行中”、“已完成”、“未开始”，仅进度节点有）
+styleContent：进度节点的样式对象，包含以下子字段：
+backgroundColor：背景色
+fontColor：字体颜色
+strikethrough：布尔值，是否加删除线
+
+
+筛选/过滤（Filter）相关 keys
+
+projectName：项目名称
+department：部门名称
+systemName：系统名称
+person：负责人
